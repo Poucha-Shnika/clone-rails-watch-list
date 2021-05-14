@@ -1,0 +1,9 @@
+<h1>Add a stupid bookmark to <%= @list.name %></h1>
+
+<%= simple_form_for [ @list, @bookmark ] do |f| %>
+  <%= f.association :movie %>
+  <%= f.input :comment %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Back to all the stupid lists", lists_path %>
